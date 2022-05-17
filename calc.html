@@ -8,6 +8,7 @@
     <input id="int1"type="text" name="" value="">
     <input id="int2"type="text" name="" value="">
     <button onclick="keisan()" type="button" name="button">計算する</button>
+    <p id = "result"></p>
     <script type="text/javascript">
     function keisan() {
 
@@ -15,6 +16,8 @@
       var element2 = document.getElementById('int2');
 
       var result = parseInt(element1.value) + parseInt(element2.value);
+      var result_text = document.getElementById('result');
+      result_text.textContent = result;
 
       alert(result);
     }
